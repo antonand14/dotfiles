@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Define the VPN interface name
+VPN_INTERFACE="se-got-wg-001"
+
+# Check current VPN connection status
+VPN_STATUS=$(curl -s https://am.i.mullvad.net/connected)
+
+if [[ "$VPN_STATUS" =~ "You are connected to Mullvad" ]]; then
+    echo "You are connected to Mullvad. Disconnecting..."
+    sudo wg-quick down "$VPN_INTERFACE"
+    if [ $? -eq 0 ]; then
+        echo "Successfully disconnected from Mullvad VPN."
+    else
+        echo "Failed to disconnect from Mullvad VPN."
+    fi
+elif [[ "$VPN_STATUS" =~ "You are not connected to Mullvad" ]]; then
+    echo "You are not connected to Mullvad. Connecting..."
+    sudo wg-quick up "$VPN_INTERFACE"
+    if [ $? -eq 0 ]; then
+        echo "Successfully connected to Mullvad VPN."
+    else
+        echo "Failed to connect to Mullvad VPN."
+    fi
+else
+    echo "Unexpected response from Mullvad status check: $VPN_STATUS"
+fi
