@@ -16,16 +16,16 @@
         "memory",
         "cpu",
         "network",
-        "battery",
-        "backlight",
-        "pulseaudio",
-        "pulseaudio#microphone"
+        // "battery",
+        // "backlight",
+        // "pulseaudio#microphone",
+        "pulseaudio"
     ],
 
     "hyprland/window": {
-        "format": "󰣇 {}"
+        "format": "{}"
     },
-    
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -39,7 +39,7 @@
     },
 
     "clock": {
-        "format": "{:%A    %B-%d-%Y    %I:%M:%S %p}",
+        "format": "{:%A %d - %H:%M}",
         "interval": 1,
         "rotate": 0,
         "tooltip-format": "<tt>{calendar}</tt>",

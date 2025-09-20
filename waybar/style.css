@@ -3,13 +3,13 @@
     border-radius: 0;
     font-family: JetBrainsMono Nerd Font, monospace;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     min-height: 0;
 }
 
 window#waybar {
     background: rgba(21, 18, 27, 0);
-    color: #cdd6f4;
+    color: #BDBDBD;
 }
 
 #workspaces button {
@@ -19,23 +19,23 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #a6adc8;
+    color: #BDBDBD;
 }
 
 #workspaces button.focused {
-    color: #a6adc8;
-    background: #eba0ac;
+    color: #BDBDBD;
+    /* background: #eba0ac; */
     border-radius: 10px;
 }
 
 #workspaces button.urgent {
     color: #11111b;
-    background: #a6e3a1;
+    /* background: #a6e3a1; */
     border-radius: 10px;
 }
 
 #workspaces button:hover {
-    background: #cdd6f4;
+    background: #BDBDBD;
     color: #11111b; 
     border-radius: 10px;
 }
@@ -50,7 +50,7 @@ window#waybar {
 #workspaces,
 #tray,
 #backlight {
-    background: #1e1e2e;
+    /* background: #1e1e2e; */
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 5px;
@@ -67,7 +67,7 @@ window#waybar {
 }
 
 #workspaces {
-    background: #1e1e2e;
+    /* background: #1e1e2e; */
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 0px;
@@ -77,10 +77,12 @@ window#waybar {
 #cpu {
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
+    color: #BDBDBD;
 }
 
 #memory {
     border-radius: 10px 0px 0px 10px;
+    color: #BDBDBD;
 }
 
 #window {
@@ -90,26 +92,27 @@ window#waybar {
 }
 
 #clock {
-    color: #a6adc8;
+    color: #BDBDBD;
     border-radius: 10px 10px 10px 10px;
     margin-left: 5px;
     border-right: 0px;
 }
 
 #network {
-    color:  #a6adc8;
+    color:  #BDBDBD;
     border-radius: 10px 0px 0px 10px;
 
 }
 
 #pulseaudio {
-    color: #a6adc8;
+    color: #BDBDBD;
     border-left: 0px;
     border-right: 0px;
+    margin-right: 5px;
 }
 
 #pulseaudio.microphone {
-    color: #a6adc8;
+    color: #BDBDBD;
     border-radius: 0px 10px 10px 0px;
     border-left: 0px;
     border-right: 0px;
@@ -117,7 +120,7 @@ window#waybar {
 }
 
 #battery {
-    color:#a6adc8;
+    color:#BDBDBD;
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }
