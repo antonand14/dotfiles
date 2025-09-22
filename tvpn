@@ -24,4 +24,11 @@ elif [[ "$VPN_STATUS" =~ "You are not connected to Mullvad" ]]; then
     fi
 else
     echo "Unexpected response from Mullvad status check: $VPN_STATUS"
+		echo "Trying to disconnect from Mullvad..."
+	  sudo wg-quick down "$VPN_INTERFACE"
+    if [ $? -eq 0 ]; then
+        echo "Successfully disconnected from Mullvad VPN."
+    else
+        echo "Failed to disconnect from Mullvad VPN."
+    fi
 fi
